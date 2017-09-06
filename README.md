@@ -18,7 +18,7 @@ A generic vehicle for dispatching and listening to events.
 
 ### Extending
 
-```
+```typescript
 import { EventDispatcher, DispatchableEvent } from 'event-dispatcher';
 
 class SomeClassOrService extends EventDispatcher {
@@ -36,7 +36,7 @@ class SomeClassOrService extends EventDispatcher {
 
 ### Consuming
 
-```
+```typescript
 import DispatchableEvent from 'event-dispatcher';
 import SomeClassOrService from './some-class-or-service';
 
