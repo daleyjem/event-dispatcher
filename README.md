@@ -2,6 +2,12 @@
 
 A generic vehicle for dispatching and listening to events.
 
+## Installation
+
+```
+npm install ts-event-dispatcher
+```
+
 ## Objects
 
 ### EventDispatcher
@@ -19,7 +25,7 @@ A generic vehicle for dispatching and listening to events.
 ### Extending
 
 ```typescript
-import { EventDispatcher, DispatchableEvent } from 'event-dispatcher';
+import { EventDispatcher, DispatchableEvent } from 'ts-event-dispatcher';
 
 class SomeClassOrService extends EventDispatcher {
 	public static MY_EVENT:string = 'my_event';
@@ -37,7 +43,7 @@ class SomeClassOrService extends EventDispatcher {
 ### Consuming
 
 ```typescript
-import DispatchableEvent from 'event-dispatcher';
+import DispatchableEvent from 'ts-event-dispatcher';
 import SomeClassOrService from './some-class-or-service';
 
 class SomeOtherClassOrService {
