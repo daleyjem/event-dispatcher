@@ -78,15 +78,38 @@
  * @class DispatchableEvent
  */
 export class DispatchableEvent {
-    public type:string;
+    // Indicates whether an event is a bubbling event.
+    public readonly bubbles:boolean;
+    // Indicates whether the behavior associated with the event can be prevented.
+    public readonly cancelable:boolean;
+    // The object that is actively processing the Event object with an event listener.
+    public readonly currentTarget:any;
+    // The current phase in the event flow.
+    public readonly eventPhase:number;
+    // The event target.
+    public readonly target:any;
+    // The type of event.
+    public readonly type:string;
 
     /**
      * Instantiates a new DispatchableEvent object
      * 
      * @param {string} type Type of event.
+     * @param {boolean} bubbles Determines whether the Event object participates in the bubbling stage of the event flow. The default value is false.
+     * @param {boolean} cancelable Determines whether the Event object can be canceled. The default values is false.
      * @memberof DispatchableEvent
      */
-    constructor(type:string){
-        this.type = type;
+    constructor(type:string, bubbles:boolean = false, cancelable:boolean = false){
+        this.type       = type;
+        this.bubbles    = bubbles;
+        this.cancelable = cancelable;
+    }
+
+    public preventDefault():void {
+
+    }
+
+    public stopPropagation():void {
+
     }
 }
